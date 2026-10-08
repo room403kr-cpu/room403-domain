@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/", "destination": "https://room-403.vercel.app/" },
     { "source": "/:path*", "destination": "https://room-403.vercel.app/:path*" }
   ]
 }
