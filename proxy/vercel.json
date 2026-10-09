@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "https://room-403.vercel.app/" },
-    { "source": "/about", "destination": "https://room-403.vercel.app/" },
-    { "source": "/work", "destination": "https://room-403.vercel.app/" },
-    { "source": "/:path*", "destination": "https://room-403.vercel.app/:path*" }
-  ]
-}
