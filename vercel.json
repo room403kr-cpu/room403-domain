@@ -1,6 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "https://room-403.vercel.app/" },
-    { "source": "/:path*", "destination": "https://room-403.vercel.app/:path*" }
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/work", "destination": "/#work", "permanent": false },
+    { "source": "/about", "destination": "/#about", "permanent": false }
   ]
 }

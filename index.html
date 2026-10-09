@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ART ROOM.403 | Production Design Studio, Seoul</title>
+<meta name="description" content="ART ROOM.403 is a three-person production design studio in Seoul, working on independent films and broadcast since 2025.">
+<meta property="og:title" content="ART ROOM.403 | Production Design Studio, Seoul">
+<meta property="og:description" content="A three-person production design studio in Seoul, working on independent films and broadcast since 2025.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://room403.kr/">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="canonical" href="https://room403.kr/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto+Condensed:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#0b0b0b; --panel:#141414; --ink:#f3efe9; --ink-2:#b8b2aa; --ink-3:#7d7871;
+  --line:#2a2826; --accent:#f2541b;
+  --display:"Roboto Condensed","Noto Sans KR",system-ui,sans-serif;
+  --body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:24px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:rgba(11,11,11,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-family:var(--display);font-weight:500;font-size:16px}
+.nav a{text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding-block:clamp(72px,14vw,150px) clamp(56px,9vw,96px)}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin:0 0 18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(52px,11vw,124px);line-height:.95;letter-spacing:-.01em;margin:0}
+.hero .ko{font-size:clamp(20px,3.2vw,30px);font-weight:500;margin:18px 0 0}
+.lede{max-width:40em;margin:34px 0 0;font-size:17px;color:var(--ink-2)}
+.lede strong{color:var(--ink);font-weight:500}
+
+/* the notched rule from the studio's identity */
+.rule{display:flex;align-items:flex-start;height:6px}
+.rule::before,.rule::after{content:"";height:3px;background:var(--accent)}
+.rule::before{flex:0 0 30%}
+.rule::after{flex:1;margin-left:44px}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.nums div{padding:26px 16px 28px 0;min-width:0}
+.nums div+div{padding-left:22px;border-left:1px solid var(--line)}
+.nums dt{font-size:13.5px;color:var(--ink-3);margin-top:6px}
+.nums dd{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(34px,5.4vw,56px);line-height:1}
+.nums dl{margin:0;display:flex;flex-direction:column-reverse}
+
+/* sections */
+section{padding-block:clamp(56px,8vw,96px);border-bottom:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px 48px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.6vw,46px);line-height:1.05;margin:0}
+.cols p{margin:0 0 14px;color:var(--ink-2);max-width:38em}
+.cols p.ko{color:var(--ink-3);font-size:15px}
+.cols p strong{color:var(--ink);font-weight:500}
+
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.list b{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.3}
+.list span{color:var(--ink-2)}
+.list small{display:block;color:var(--ink-3);font-size:14px;margin-top:4px}
+.note{color:var(--ink-3);font-size:14.5px;margin:16px 0 0}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:22px 0 0;padding:0}
+.tags li{border:1px solid var(--line);padding:5px 12px;font-size:14.5px;color:var(--ink-2)}
+
+/* contact */
+.contact a.mail{font-family:var(--display);font-weight:700;font-size:clamp(24px,4.4vw,40px);text-decoration:none;border-bottom:3px solid var(--accent);padding-bottom:2px}
+.contact a.mail:hover{color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:8px 26px;list-style:none;margin:26px 0 0;padding:0;font-size:15.5px}
+.links a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.links a:hover{color:var(--accent)}
+
+footer{padding-block:28px 48px;color:var(--ink-3);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+
+@media (max-width:760px){
+  .cols{grid-template-columns:1fr}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{padding:20px 12px 22px 0}
+  .nums div:nth-child(odd){padding-left:0;border-left:0}
+  .nums div:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+  .nums div:nth-child(n+3){border-top:1px solid var(--line)}
+  .list li{grid-template-columns:1fr}
+  .rule::after{margin-left:28px}
+  .brand{font-size:18px}
+  .nav{gap:4px 14px;font-size:15px;justify-content:flex-end}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">ART ROOM.403</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <p class="eyebrow">Production design studio · Seoul</p>
+    <h1>Building<br>one world.</h1>
+    <p class="ko" lang="ko">하나의 세계를 만들다.</p>
+    <p class="lede"><strong>ART ROOM.403</strong> is a three-person production design studio for independent film and broadcast. We design the spaces a story happens in, then source, build and dress them on set.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"></div>
+    <div class="nums">
+      <div><dl><dt>working since</dt><dd>2025</dd></dl></div>
+      <div><dl><dt>productions, about</dt><dd>10</dd></dl></div>
+      <div><dl><dt>episodes in one broadcast series</dt><dd>10</dd></dl></div>
+      <div><dl><dt>people on the team</dt><dd>3</dd></dl></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap cols">
+      <h2>About</h2>
+      <div>
+        <p>We take a production from the screenplay to the last receipt: reading the script for spaces and props, planning the look with the director, sourcing and making what the scenes need, dressing the set, and closing the art budget after the shoot.</p>
+        <p>The team is two production designers and one assistant, all trained in design. Most of our work so far is short film, alongside broadcast, and we are moving into music video and drama.</p>
+        <p class="ko" lang="ko">시나리오를 읽는 일부터 촬영 뒤 정산까지 맡습니다. 공간과 소품을 설계하고, 구하고, 만들고, 현장에서 채웁니다.</p>
+        <ul class="tags" aria-label="What we do">
+          <li>Production design</li>
+          <li>Art direction</li>
+          <li>Props and set dressing</li>
+          <li>Art budget and settlement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap cols">
+      <h2>Work</h2>
+      <div>
+        <ul class="list">
+          <li><b>Broadcast</b><span>A 10-episode series for KBS.<small>2025</small></span></li>
+          <li><b>Short film</b><span>Nine short films, made with university and graduate film programs and with publicly funded productions.<small>2025 to 2026</small></span></li>
+          <li><b>Festivals</b><span>Films we worked on include an official selection at the Bucheon International Fantastic Film Festival in 2026 and several festival award winners.</span></li>
+        </ul>
+        <p class="note">We do not list titles here. Credits and stills are shared on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="wrap cols">
+      <h2>Tools we build</h2>
+      <div>
+        <p>A small art department loses most of its time to paperwork. We build our own operating tools with <strong>Claude</strong>, by Anthropic, and run them in Google Sheets and Drive.</p>
+        <ul class="list">
+          <li><b>Production sheet</b><span>One sheet per production that links the scene list, the prop list, the estimate and the settlement, so a change in one place carries through to the rest.<small>In use. Our latest short tracked 85 props in it.</small></span></li>
+          <li><b>Expense settlement</b><span>Expenses and receipts go in, a settlement document ready to submit comes out.<small>In use.</small></span></li>
+          <li><b>Job intake</b><span>Reading incoming job alerts, checking them against our rates and calendar, and drafting a reply for a person to approve.<small>In progress.</small></span></li>
+          <li><b>Screenplay breakdown</b><span>From a script to a first scene and prop breakdown with a draft budget, ready before the first meeting.<small>Next.</small></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap cols">
+      <h2>Contact</h2>
+      <div>
+        <a class="mail" href="mailto:room.403.kr@gmail.com">room.403.kr@gmail.com</a>
+        <ul class="links">
+          <li><a href="https://www.instagram.com/art_room.403" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@ArtRoom.403" rel="noopener">YouTube</a></li>
+          <li>Seoul, Republic of Korea</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 ART ROOM.403</span>
+    <span>A fuller portfolio site is in preparation.</span>
+  </div>
+</footer>
+
+</body>
+</html>
