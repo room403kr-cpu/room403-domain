@@ -20,6 +20,12 @@ html,body{{height:100%;background:#151413}}
 .rule::after{{flex:1;margin-left:calc(var(--p)*.9);clip-path:polygon(var(--r) 0,100% 0,100% 100%,0 100%)}}
 .meta{{margin-top:calc(var(--p)*.55);font-weight:500;font-size:var(--m);letter-spacing:.09em;text-transform:uppercase;color:#9E9695}}
 h1{{margin-top:calc(var(--p)*.35);font-family:RC,Min,sans-serif;font-weight:700;font-size:var(--h);line-height:1.16;letter-spacing:-.015em;word-break:keep-all;text-wrap:balance;max-width:92%}}
+.land{{align-items:center;justify-content:center;text-align:center}}
+.land>*{{width:50%}}
+.land .rule{{position:absolute;top:var(--p);left:25%}}
+.land h1{{max-width:none;margin-top:calc(var(--p)*.3)}}
+.land .meta{{margin-top:0}}
+.t{{position:relative}}
 .foot{{margin-top:auto;display:flex;justify-content:space-between;font-weight:500;font-size:calc(var(--m)*.86);letter-spacing:.09em;text-transform:uppercase;color:#6F6867}}
 """
 def size(title, big, mid, small):
@@ -28,10 +34,10 @@ def size(title, big, mid, small):
 def page(title, cat, year, room, w, h, kind):
     if kind == "work":   p, r, m, hh = 44, 6, 21, size(title, 82, 66, 54)
     elif kind == "port": p, r, m, hh = 64, 9, 31, size(title, 124, 100, 82)
-    else:                p, r, m, hh = 72, 9, 30, size(title, 132, 108, 90)
+    else:                p, r, m, hh = 72, 9, 28, size(title, 112, 92, 78)
     foot = f'<div class="foot"><span>{room}</span></div>' if kind == "work" else ""
     return f"""<!doctype html><meta charset=utf-8><style>{CSS}</style>
-<div class=t style="--p:{p}px;--r:{r}px;--m:{m}px;--h:{hh}px"><div class=rule></div>
+<div class="t {kind}" style="--p:{p}px;--r:{r}px;--m:{m}px;--h:{hh}px"><div class=rule></div>
 <div class=meta>{html.escape(cat)} · {html.escape(year)}</div><h1>{html.escape(title)}</h1>{foot}</div>"""
 async def main():
     by = {r[0]: r for r in ART + COLOR}
